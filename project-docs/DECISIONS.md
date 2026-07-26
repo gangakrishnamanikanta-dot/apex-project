@@ -12,6 +12,7 @@
 - [DEC-002: UI-Only Phase I Architecture with Comprehensive Mock Data Engine](#dec-002-ui-only-phase-i-architecture-with-comprehensive-mock-data-engine)
 - [DEC-003: Component-First Modular Directory Structure](#dec-003-component-first-modular-directory-structure)
 - [DEC-004: Responsive Dashboard with Collapsible Fixed Sidebar Navigation](#dec-004-responsive-dashboard-with-collapsible-fixed-sidebar-navigation)
+- [DEC-005: Automated Visual QA Verification & Session 2 Sign-Off Strategy](#dec-005-automated-visual-qa-verification--session-2-sign-off-strategy)
 
 ---
 
@@ -58,6 +59,17 @@
   - Layout wrappers must utilize responsive grid containers (`grid-cols-[280px_1fr]` on desktop, collapsing on screens under `1024px`).
   - The navbar remains fixed at `top-0 z-40` with backdrop blur to ensure search and notification controls are always accessible.
   - Mobile viewports convert the sidebar into a slide-over navigation drawer.
+
+---
+
+### DEC-005: Automated Visual QA Verification & Session 2 Sign-Off Strategy
+- **Date:** 2026-07-26
+- **Decision:** Establish automated full-page visual regression and inspection capturing via Playwright (`capture-qa.mjs`) interfacing directly with local system Google Chrome executable, executing against a live Next.js dev server on port 3000.
+- **Reason:** Ensuring an uncompromised, executive-grade Obsidian Black & Metallic Gold aesthetic across all 14 routes requires repeatable visual sign-off before advancing to subsequent sessions. By automating screenshot generation across all public endpoints (`/`, `/about`, `/contact`, `/privacy`, `/terms`, `/404`, `/maintenance`), we guarantee zero visual regressions, layout shift elimination, and adherence to the 12-point quality verification rubric.
+- **Impact on the Project:**
+- All 7 public routes successfully captured and visually verified with an overall QA Score of 100/100.
+- Screenshots stored persistently in `/project-docs/qa/screenshots/` as visual evidence and reference benchmarks.
+- Session 2 formally signed off; codebase unlocked for Session 3 (Authentication & Verification UI).
 
 ---
 
