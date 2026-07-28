@@ -19,9 +19,15 @@ export const metadata: Metadata = {
   description: "Building Technology. Creating Opportunities. MEERASH is a job and task marketplace connecting job seekers, freelancers, students, and employers. Launching soon.",
   keywords: ["Jobs", "Tasks", "Marketplace", "Freelancers", "Job Seekers", "Employers", "AI Matching", "Early Access"],
   icons: {
-    icon: "/logo.png",
+    icon: [
+      { url: "/logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo.png", sizes: "192x192", type: "image/png" },
+      { url: "/logo.png", sizes: "512x512", type: "image/png" },
+    ],
     shortcut: "/logo.png",
-    apple: "/logo.png",
+    apple: [
+      { url: "/logo.png", sizes: "180x180", type: "image/png" },
+    ],
   },
 };
 
