@@ -20,7 +20,7 @@ export default function NotFoundPage() {
         </div>
 
         <div className="flex flex-col gap-3">
-          <span className="font-mono text-5xl font-extrabold text-gold-primary">404</span>
+          <span className="font-sans text-5xl font-extrabold text-gold-primary">404</span>
           <h1 className="font-sans text-3xl sm:text-4xl font-extrabold text-white-primary tracking-tight">
             Premium Coordinate Unreachable
           </h1>

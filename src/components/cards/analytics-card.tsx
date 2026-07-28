@@ -43,7 +43,7 @@ export function AnalyticsCard({
       </div>
 
       <div className="flex flex-col gap-1">
-        <span className="font-mono text-3xl font-bold tracking-tight text-white-primary">
+        <span className="font-sans text-2xl sm:text-3xl font-bold tracking-tight text-white-primary">
           {value}
         </span>
 
@@ -51,7 +51,7 @@ export function AnalyticsCard({
           <div className="flex items-center gap-1.5 pt-1">
             <span
               className={cn(
-                'inline-flex items-center gap-0.5 rounded px-1.5 py-0.5 font-mono text-xs font-semibold',
+                'inline-flex items-center gap-0.5 rounded px-1.5 py-0.5 font-sans text-xs font-semibold',
                 isPositive && 'bg-success/15 text-success',
                 isNegative && 'bg-error/15 text-error',
                 isNeutral && 'bg-surface-elevated text-white-secondary'

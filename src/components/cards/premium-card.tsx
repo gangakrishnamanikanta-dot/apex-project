@@ -62,7 +62,7 @@ export function PremiumCard({
 
       {/* Pricing */}
       <div className="flex items-baseline gap-1 my-2">
-        <span className="font-mono text-4xl font-extrabold tracking-tight text-white-primary">{price}</span>
+        <span className="font-sans text-2xl sm:text-4xl font-extrabold tracking-tight text-white-primary">{price}</span>
         <span className="font-sans text-sm font-medium text-white-secondary">{billingPeriod}</span>
       </div>
 

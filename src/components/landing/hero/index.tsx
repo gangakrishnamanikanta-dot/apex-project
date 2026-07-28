@@ -94,7 +94,7 @@ export function HeroSection({ className }: HeroSectionProps) {
 
             {/* Preview Label */}
             <div className="flex items-center justify-between px-2">
-              <span className="font-mono text-xs uppercase tracking-widest text-gold-primary font-bold">
+              <span className="font-sans text-xs uppercase tracking-widest text-gold-primary font-bold">
                 Product Preview
               </span>
               <Badge variant="gold" size="sm">Coming Soon</Badge>

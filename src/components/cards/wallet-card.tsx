@@ -53,7 +53,7 @@ export function WalletCard({
       <div className="my-6 flex flex-col gap-1">
         <span className="font-sans text-xs uppercase tracking-wider text-white-secondary">Balance</span>
         <div className="flex items-baseline gap-2">
-          <span className="font-mono text-4xl font-bold tracking-tight text-white-primary">{balance}</span>
+          <span className="font-sans text-3xl sm:text-4xl font-bold tracking-tight text-white-primary">{balance}</span>
           <span className="font-sans text-sm font-semibold text-gold-primary">{currency}</span>
         </div>
       </div>

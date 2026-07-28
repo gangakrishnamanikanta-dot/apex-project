@@ -71,7 +71,7 @@ export function TopNav({
         {user.walletBalance !== undefined && (
           <div className="hidden md:flex items-center gap-2 rounded-full bg-surface px-3.5 py-1.5 border border-gold-primary/30 shadow-[0_0_10px_rgba(212,175,55,0.1)]">
             <Icons.Wallet className="h-4 w-4 text-gold-primary" />
-            <span className="font-mono text-xs font-bold text-white-primary">
+            <span className="font-sans text-xs font-bold text-white-primary">
               ${user.walletBalance.toLocaleString()}
             </span>
             <Badge variant="gold" size="sm">Corporate</Badge>

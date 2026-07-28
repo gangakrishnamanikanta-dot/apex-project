@@ -45,7 +45,7 @@ export function ProgressBar({
       {(label || showValue) && (
         <div className="flex items-center justify-between font-sans text-xs font-semibold">
           {label && <span className="text-white-secondary">{label}</span>}
-          {showValue && <span className="text-gold-primary font-mono">{percentage}%</span>}
+          {showValue && <span className="text-gold-primary font-sans font-bold">{percentage}%</span>}
         </div>
       )}
       <div className={cn('w-full overflow-hidden rounded-full bg-surface-elevated', sizeClasses[size])}>

@@ -35,7 +35,7 @@ export function HowItWorksSection({ className }: HowItWorksSectionProps) {
             >
               {/* Step Number Badge */}
               <div className="flex items-center justify-between">
-                <span className="font-mono text-3xl font-extrabold text-gold-primary opacity-90 group-hover:scale-110 transition-transform">
+                <span className="font-sans text-3xl font-extrabold text-gold-primary opacity-90 group-hover:scale-110 transition-transform">
                   {item.step}
                 </span>
                 {index < MOCK_HOW_IT_WORKS_STEPS.length - 1 && (

@@ -65,7 +65,7 @@ export function ProfileCard({
       <div className="flex items-center justify-between rounded-lg bg-bg-primary px-3.5 py-2.5 border border-border-primary">
         <div className="flex items-center gap-1.5">
           <Star className="h-4 w-4 fill-gold-primary text-gold-primary" />
-          <span className="font-mono text-sm font-bold text-white-primary">{rating}</span>
+          <span className="font-sans text-sm font-bold text-white-primary">{rating}</span>
           <span className="font-sans text-xs text-text-muted">({reviewsCount} Enterprise Reviews)</span>
         </div>
         <Badge variant="gold" size="sm">Top 1% Talent</Badge>

@@ -25,7 +25,7 @@ export function StatisticCard({ label, value, change, description, className }: 
         <span className="font-sans text-xs font-bold uppercase tracking-widest text-gold-primary">
           {label}
         </span>
-        <div className="font-mono text-4xl sm:text-5xl font-extrabold tracking-tight text-white-primary my-2 group-hover:text-gold-light transition-colors">
+        <div className="font-sans text-4xl sm:text-5xl font-extrabold tracking-tight text-white-primary my-2 group-hover:text-gold-light transition-colors">
           {value}
         </div>
       </div>
