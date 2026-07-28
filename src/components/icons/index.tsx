@@ -91,19 +91,18 @@ export const Icons = {
 /**
  * MEERASH Brand Logo Component
  */
-export function MeerashLogo({ className = 'h-8 sm:h-9 w-auto', showText = true }: { className?: string; showText?: boolean }) {
+export function MeerashLogo({ className, showText = true }: { className?: string; showText?: boolean }) {
   return (
-    <div className={cn("flex items-center gap-2.5 select-none", className)}>
+    <div className={cn("flex items-center gap-3 select-none", className)}>
       <img
         src="/logo.png"
         alt="MEERASH Logo"
-        className="h-8 sm:h-9 w-auto object-contain shrink-0"
+        className="h-10 sm:h-12 md:h-14 w-auto object-contain shrink-0 filter drop-shadow-md"
       />
       {showText && (
-        <div className="flex flex-col">
-          <span className="font-sans text-lg font-bold tracking-tight text-white-primary">MEERASH</span>
-          <span className="text-[10px] font-medium uppercase tracking-widest text-gold-primary">Enterprise</span>
-        </div>
+        <span className="font-sans text-xl sm:text-2xl font-extrabold tracking-tight text-white-primary">
+          MEERASH
+        </span>
       )}
     </div>
   );

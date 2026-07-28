@@ -23,7 +23,7 @@ export function TopNav({
   onToggleMobileSidebar,
   user = {
     name: 'Alexander Wright',
-    email: 'a.wright@meerash-enterprise.com',
+    email: 'a.wright@meerash.com',
     role: 'Employer',
     isVerified: true,
     walletBalance: 124500,
@@ -59,7 +59,7 @@ export function TopNav({
           <SearchInput
             value={searchQuery}
             onChange={setSearchQuery}
-            placeholder="Search enterprise jobs, contractors, contracts... (Ctrl + K)"
+            placeholder="Search jobs, tasks, candidates... (Ctrl + K)"
             size="sm"
           />
         </div>

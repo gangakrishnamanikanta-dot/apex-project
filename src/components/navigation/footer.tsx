@@ -29,17 +29,17 @@ export function Footer({ className }: FooterProps) {
           <div className="flex flex-col gap-2">
             <MeerashLogo />
             <p className="font-sans text-xs text-text-muted max-w-md">
-              The Enterprise Marketplace for building technology and creating opportunities with instant escrow settlement.
+              The Marketplace for building technology and creating opportunities.
             </p>
           </div>
 
           {/* Trust Badges */}
           <div className="flex flex-wrap items-center gap-4 text-xs font-semibold text-white-primary">
             <span className="flex items-center gap-1.5 rounded-md bg-surface px-3 py-1.5 border border-border-primary">
-              <Shield className="h-4 w-4 text-gold-primary" /> SOC2 Type II Certified
+              <Shield className="h-4 w-4 text-gold-primary" /> Verified Platform
             </span>
             <span className="flex items-center gap-1.5 rounded-md bg-surface px-3 py-1.5 border border-border-primary">
-              <Lock className="h-4 w-4 text-success" /> 256-Bit Escrow Encryption
+              <Lock className="h-4 w-4 text-success" /> Secure Platform
             </span>
             <span className="flex items-center gap-1.5 rounded-md bg-surface px-3 py-1.5 border border-border-primary">
               <Globe className="h-4 w-4 text-info" /> Global MEERASH Platform
@@ -54,7 +54,7 @@ export function Footer({ className }: FooterProps) {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 font-sans text-xs text-text-muted">
           <div className="flex items-center gap-2">
             <span className="inline-block h-2 w-2 rounded-full bg-success animate-pulse" />
-            <span className="font-medium text-white-secondary">All Enterprise Systems Operational</span>
+            <span className="font-medium text-white-secondary">All Systems Operational</span>
           </div>
 
           <div className="flex items-center gap-6">
@@ -64,15 +64,12 @@ export function Footer({ className }: FooterProps) {
             <Link href="/privacy" className="hover:text-gold-primary transition-colors">
               Privacy & Security
             </Link>
-            <Link href="/escrow" className="hover:text-gold-primary transition-colors">
-              Escrow Agreement
-            </Link>
             <Link href="/support" className="hover:text-gold-primary transition-colors">
-              Premium Support
+              Support
             </Link>
           </div>
 
-          <span>© {currentYear} MEERASH Enterprise Inc. All rights reserved.</span>
+          <span>© {currentYear} MEERASH Inc. All rights reserved.</span>
         </div>
       </div>
     </footer>
