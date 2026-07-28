@@ -27,44 +27,44 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-              <div className="flex flex-col gap-3">
-                <div className="h-12 w-12 rounded-lg bg-surface-elevated border border-divider flex items-center justify-center">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6">
+              <div className="flex flex-col gap-3 p-4 rounded-xl bg-surface-muted/60 border border-border-primary/60 hover:border-gold-primary/40 transition-colors">
+                <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-lg bg-surface-elevated border border-divider flex items-center justify-center shrink-0">
                   <Mail className="h-5 w-5 text-gold-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-white-primary">Support Email</h3>
-                  <p className="text-white-secondary text-sm">support@meerash.com</p>
+                  <h3 className="font-bold text-white-primary text-sm sm:text-base">Support Email</h3>
+                  <p className="text-white-secondary text-xs sm:text-sm break-all">support@meerash.com</p>
                 </div>
               </div>
 
-              <div className="flex flex-col gap-3">
-                <div className="h-12 w-12 rounded-lg bg-surface-elevated border border-divider flex items-center justify-center">
+              <div className="flex flex-col gap-3 p-4 rounded-xl bg-surface-muted/60 border border-border-primary/60 hover:border-gold-primary/40 transition-colors">
+                <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-lg bg-surface-elevated border border-divider flex items-center justify-center shrink-0">
                   <MessageSquare className="h-5 w-5 text-gold-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-white-primary">Business Enquiries</h3>
-                  <p className="text-white-secondary text-sm">partners@meerash.com</p>
+                  <h3 className="font-bold text-white-primary text-sm sm:text-base">Business Enquiries</h3>
+                  <p className="text-white-secondary text-xs sm:text-sm break-all">partners@meerash.com</p>
                 </div>
               </div>
 
-              <div className="flex flex-col gap-3">
-                <div className="h-12 w-12 rounded-lg bg-surface-elevated border border-divider flex items-center justify-center">
+              <div className="flex flex-col gap-3 p-4 rounded-xl bg-surface-muted/60 border border-border-primary/60 hover:border-gold-primary/40 transition-colors">
+                <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-lg bg-surface-elevated border border-divider flex items-center justify-center shrink-0">
                   <Clock className="h-5 w-5 text-gold-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-white-primary">Support Hours</h3>
-                  <p className="text-white-secondary text-sm">Mon-Fri, 9:00 AM - 6:00 PM (EST)</p>
+                  <h3 className="font-bold text-white-primary text-sm sm:text-base">Support Hours</h3>
+                  <p className="text-white-secondary text-xs sm:text-sm">Mon-Fri, 9am-6pm (EST)</p>
                 </div>
               </div>
               
-              <div className="flex flex-col gap-3">
-                <div className="h-12 w-12 rounded-lg bg-surface-elevated border border-divider flex items-center justify-center">
+              <div className="flex flex-col gap-3 p-4 rounded-xl bg-surface-muted/60 border border-border-primary/60 hover:border-gold-primary/40 transition-colors">
+                <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-lg bg-surface-elevated border border-divider flex items-center justify-center shrink-0">
                   <MapPin className="h-5 w-5 text-gold-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-white-primary">Global Remote</h3>
-                  <p className="text-white-secondary text-sm">A fully remote organization</p>
+                  <h3 className="font-bold text-white-primary text-sm sm:text-base">Global Remote</h3>
+                  <p className="text-white-secondary text-xs sm:text-sm">Fully remote organization</p>
                 </div>
               </div>
             </div>
