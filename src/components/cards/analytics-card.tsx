@@ -43,7 +43,7 @@ export function AnalyticsCard({
       </div>
 
       <div className="flex flex-col gap-1">
-        <span className="font-sans text-2xl sm:text-3xl font-bold tracking-tight text-white-primary">
+        <span className="font-sans text-xl sm:text-2xl font-bold tracking-tight text-white-primary leading-tight break-words">
           {value}
         </span>
 
