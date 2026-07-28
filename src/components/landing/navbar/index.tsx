@@ -37,7 +37,7 @@ export function PublicNavbar({ className }: PublicNavbarProps) {
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 flex h-20 w-full items-center justify-between border-b border-border-primary/80 bg-bg-primary/85 px-6 lg:px-12 backdrop-blur-lg transition-all select-none',
+        'sticky top-0 z-50 flex h-16 md:h-20 w-full items-center justify-between border-b border-border-primary/80 bg-bg-primary/85 px-4 sm:px-6 lg:px-12 backdrop-blur-lg transition-all select-none',
         className
       )}
     >
