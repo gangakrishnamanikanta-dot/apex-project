@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { cn } from '@/lib/utils';
 import {
   LayoutDashboard,
   Briefcase,
@@ -90,11 +91,15 @@ export const Icons = {
 /**
  * MEERASH Brand Logo Component
  */
-export function MeerashLogo({ className = 'h-8 w-auto', showText = true }: { className?: string; showText?: boolean }) {
+export function MeerashLogo({ className = 'h-9 w-auto', showText = true }: { className?: string; showText?: boolean }) {
   return (
-    <div className="flex items-center gap-2.5 select-none">
-      <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-gold-primary to-gold-hover shadow-gold-glow">
-        <span className="font-sans text-xl font-bold tracking-tighter text-bg-primary">M</span>
+    <div className={cn("flex items-center gap-2.5 select-none", className)}>
+      <div className="relative flex h-9 w-9 items-center justify-center rounded-lg bg-surface-elevated border border-gold-primary/40 shadow-gold-glow overflow-hidden shrink-0">
+        <img
+          src="/logo.png"
+          alt="MEERASH Logo"
+          className="h-full w-full object-contain p-0.5"
+        />
       </div>
       {showText && (
         <div className="flex flex-col">
