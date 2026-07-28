@@ -31,7 +31,7 @@ export const DEFAULT_NAV_ITEMS: NavItem[] = [
   },
   {
     id: 'resume',
-    label: 'AI Resume Builder',
+    label: 'Profile Builder',
     href: '/resume',
     badge: 'AI',
     badgeColor: 'gold',

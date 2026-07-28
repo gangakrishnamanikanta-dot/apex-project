@@ -20,9 +20,9 @@ export function HowItWorksSection({ className }: HowItWorksSectionProps) {
     <section id="how-it-works" className={cn('w-full py-16 md:py-24 px-6 lg:px-12', className)}>
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          badge="4-Step Sovereign Workflow"
-          title="How MEERASH Operates"
-          subtitle="From cryptographic identity verification to zero-delay corporate escrow release, experience friction-free enterprise engagement."
+          badge="Simple 4-Step Process"
+          title="How MEERASH Works"
+          subtitle="From creating your profile to landing your next job or gig — it only takes minutes."
           align="center"
         />
 

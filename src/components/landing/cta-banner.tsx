@@ -21,12 +21,12 @@ export interface CTABannerProps {
  * Encourages visitors to create an account, join the waitlist, or explore enterprise solutions.
  */
 export function CTABanner({
-  title = 'Ready to Join the Sovereign Network?',
-  subtitle = 'Create your verified account today or join our executive waitlist for zero-commission enterprise contracts and instant escrow settlement.',
-  primaryCtaText = 'Create Verified Account',
-  primaryCtaHref = '/register',
-  secondaryCtaText = 'Join Executive Waitlist',
-  secondaryCtaHref = '/contact',
+  title = 'Be the First to Know',
+  subtitle = 'Join thousands of job seekers, students, and professionals on the Early Access list. Be notified the moment MEERASH launches.',
+  primaryCtaText = 'Join Early Access',
+  primaryCtaHref = '/early-access',
+  secondaryCtaText = 'Explore Features',
+  secondaryCtaHref = '/features',
   className,
 }: CTABannerProps) {
   return (
@@ -41,7 +41,7 @@ export function CTABanner({
             <div className="inline-flex items-center gap-2 rounded-full bg-gold-primary/15 px-4 py-1.5 border border-gold-primary/30">
               <Sparkles className="h-4 w-4 text-gold-primary animate-pulse" />
               <span className="font-sans text-xs font-bold uppercase tracking-wider text-gold-primary">
-                Immediate Enterprise Access
+                Launching Soon
               </span>
             </div>
 
@@ -77,7 +77,10 @@ export function CTABanner({
                 <CheckCircle2 className="h-4 w-4 text-gold-primary" /> No credit card required
               </span>
               <span className="flex items-center gap-1.5 font-semibold">
-                <Shield className="h-4 w-4 text-gold-primary" /> 5-minute cryptographic verification
+                <Shield className="h-4 w-4 text-gold-primary" /> Notify when live
+              </span>
+              <span className="flex items-center gap-1.5 font-semibold">
+                <Sparkles className="h-4 w-4 text-gold-primary" /> Launching Soon
               </span>
             </div>
           </div>

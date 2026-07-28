@@ -12,7 +12,7 @@
 - [Session 4 QA: Contractor Dashboard](#session-4-qa-contractor-dashboard)
 - [Session 5 QA: Employer Portal](#session-5-qa-employer-portal)
 - [Session 6 QA: Marketplace & Discovery](#session-6-qa-marketplace--discovery)
-- [Session 7 QA: Task Marketplace & Escrow UI](#session-7-qa-task-marketplace--escrow-ui)
+- [Session 7 QA: Task Marketplace & Payments UI](#session-7-qa-task-marketplace--payments-ui)
 - [Session 8 QA: Profile & Resume Studio](#session-8-qa-profile--resume-studio)
 - [Session 9 QA: Administration & Moderation](#session-9-qa-administration--moderation)
 - [Session 10 QA: Polish, Performance & Prototype Launch](#session-10-qa-polish-performance--prototype-launch)
@@ -135,7 +135,7 @@
 
 ---
 
-### Session 7 QA: Task Marketplace & Escrow UI
+### Session 7 QA: Task Marketplace & Payments UI
 - **Sign-Off Date:** `Pending`
 - **Status:** `NOT STARTED`
 - **Verification Checklist:**

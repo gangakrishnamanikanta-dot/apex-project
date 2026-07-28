@@ -15,9 +15,9 @@ const fontOutfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "MEERASH — Sovereign Enterprise Job & Task Marketplace",
-  description: "Building Technology. Creating Opportunities. The premium Black & Gold enterprise marketplace with instant escrow settlement.",
-  keywords: ["Enterprise", "Marketplace", "Jobs", "ATS", "Escrow", "AI Sourcing", "Sovereign"],
+  title: "MEERASH — Job & Task Marketplace",
+  description: "Building Technology. Creating Opportunities. MEERASH is a job and task marketplace connecting job seekers, freelancers, students, and employers. Launching soon.",
+  keywords: ["Jobs", "Tasks", "Marketplace", "Freelancers", "Job Seekers", "Employers", "AI Matching", "Early Access"],
 };
 
 export default function RootLayout({

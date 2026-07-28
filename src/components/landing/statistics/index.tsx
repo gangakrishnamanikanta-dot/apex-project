@@ -21,8 +21,8 @@ export function StatisticsSection({ className }: StatisticsSectionProps) {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           badge="By The Numbers"
-          title="Global Sovereign Scale"
-          subtitle="Our institutional escrow architecture and AI matching engine drive unrivaled efficiency across Tier-1 engineering organizations."
+          title="The Future of Work, Building Now"
+          subtitle="MEERASH is in active development — connecting talent with opportunity through technology and innovation."
           align="center"
         />
 
@@ -32,7 +32,6 @@ export function StatisticsSection({ className }: StatisticsSectionProps) {
               key={stat.id}
               label={stat.label}
               value={stat.value}
-              change={stat.change}
               description={stat.description}
             />
           ))}

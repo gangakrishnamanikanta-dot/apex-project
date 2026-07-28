@@ -13,13 +13,12 @@ export interface ContactFormProps {
 }
 
 /**
- * MEERASH Public Website Contact & Concierge Form
- * UI-only simulation for enterprise inquiries and waitlist registration.
+ * MEERASH Public Website Contact Form
+ * UI-only simulation for support inquiries and Early Access questions.
  */
 export function ContactForm({ className }: ContactFormProps) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [org, setOrg] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -40,10 +39,10 @@ export function ContactForm({ className }: ContactFormProps) {
     <div className={cn('rounded-2xl border border-border-primary bg-surface p-6 sm:p-8 md:p-10 shadow-lvl3', className)}>
       <div className="flex flex-col gap-2 pb-6 border-b border-divider mb-6">
         <h3 className="font-sans text-2xl font-bold text-white-primary tracking-tight">
-          Enterprise Inquiry & Concierge
+          Send Us a Message
         </h3>
         <p className="font-sans text-sm text-white-secondary">
-          Connect with our Vice President account managers or request custom sovereign escrow integration.
+          Have a question about MEERASH, Early Access, or the platform? Our team is here to help.
         </p>
       </div>
 
@@ -52,9 +51,9 @@ export function ContactForm({ className }: ContactFormProps) {
           <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gold-primary/20 text-gold-primary border border-gold-primary shadow-gold-glow">
             <CheckCircle2 className="h-8 w-8" />
           </div>
-          <h4 className="font-sans text-xl font-bold text-white-primary">Inquiry Secured</h4>
+          <h4 className="font-sans text-xl font-bold text-white-primary">Message Sent</h4>
           <p className="font-sans text-sm text-white-secondary max-w-md">
-            Thank you, <strong>{name || 'Sovereign Executive'}</strong>. Your message has been encrypted and routed to our Zurich Concierge desk. Expect a verified reply within 2 hours.
+            Thank you, <strong>{name || 'friend'}</strong>. Your message has been received. Our team will get back to you as soon as possible.
           </p>
           <Button
             variant="outline"
@@ -62,6 +61,7 @@ export function ContactForm({ className }: ContactFormProps) {
             onClick={() => {
               setIsSubmitted(false);
               setMessage('');
+              setSubject('');
             }}
             className="mt-2"
           >
@@ -72,42 +72,34 @@ export function ContactForm({ className }: ContactFormProps) {
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <Input
-              label="Full Name / Executive Title"
-              placeholder="e.g. Alexander Wright, CTO"
+              label="Full Name"
+              placeholder="Your name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
             />
             <Input
-              label="Corporate Email"
+              label="Email Address"
               type="email"
-              placeholder="a.wright@sovereign-org.com"
+              placeholder="you@example.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <Input
-              label="Organization / Hedge Fund"
-              placeholder="e.g. Sovereign Quantum AG"
-              value={org}
-              onChange={(e) => setOrg(e.target.value)}
-            />
-            <Input
-              label="Inquiry Subject"
-              placeholder="e.g. Custom Escrow Integration / Waitlist"
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
-              required
-            />
-          </div>
+          <Input
+            label="Subject"
+            placeholder="What can we help you with?"
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
+            required
+          />
 
           <Textarea
-            label="Message / Architectural Scope"
-            placeholder="Describe your engineering team requirements or contract timeline..."
-            rows={4}
+            label="Message"
+            placeholder="Tell us more about your question or feedback..."
+            rows={5}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
@@ -116,7 +108,7 @@ export function ContactForm({ className }: ContactFormProps) {
           <Alert variant="info" className="my-1">
             <span className="flex items-center gap-1.5 text-xs">
               <Shield className="h-3.5 w-3.5 text-gold-primary shrink-0" />
-              All communications are protected under institutional NDA and 256-bit encryption.
+              We respect your privacy. Messages are used only to respond to your inquiry.
             </span>
           </Alert>
 
@@ -129,7 +121,7 @@ export function ContactForm({ className }: ContactFormProps) {
             leftIcon={!isSubmitting ? <Send className="h-4 w-4" /> : undefined}
             className="shadow-gold-glow font-bold mt-2 text-base"
           >
-            Transmit Secure Message
+            Send Message
           </Button>
         </form>
       )}

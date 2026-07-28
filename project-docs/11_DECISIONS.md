@@ -12,6 +12,7 @@
 - [DEC-004: Responsive Dashboard with Collapsible Fixed Sidebar Navigation](#dec-004-responsive-dashboard-with-collapsible-fixed-sidebar-navigation)
 - [DEC-005: Tailwind v4 @theme Configuration & Framer Motion Type Safety](#dec-005-tailwind-v4-theme-configuration--framer-motion-type-safety)
 - [DEC-006: Dedicated Public Storefront Architecture & Routing Separation](#dec-006-dedicated-public-storefront-architecture--routing-separation)
+- [DEC-008: Rectification of Brand Identity & Removal of Institutional Fiction](#dec-008-rectification-of-brand-identity--removal-of-institutional-fiction)
 
 ---
 
@@ -80,6 +81,17 @@
   - All public storefront pages (`/`, `/about`, `/contact`, `/privacy`, `/terms`, `/404`, `/maintenance`) must wrap their content inside `<PublicLayout />`.
   - Authenticated enterprise portal sessions (starting in Phase II / Session 4) will continue using `<MainContentArea />` and `<Sidebar />`.
   - All landing UI sections (`<HeroSection />`, `<FeaturesSection />`, `<PricingSection />`, etc.) reside in `src/components/landing/` and consume mock data from `src/data/mock-landing-data.ts`.
+
+---
+
+### DEC-008: Rectification of Brand Identity & Removal of Institutional Fiction
+- **Date:** 2026-07-27
+- **Decision:** Strip all references to Swiss escrow, institutional banking, trading, cybersecurity, and AI Resume building from the platform's copy and architecture. Replace them with content reflecting a modern Job & Task Marketplace.
+- **Reason:** The previous implementation drifted from the official MEERASH blueprint, incorrectly portraying the platform as a Swiss financial/cybersecurity institution. AI capabilities were also overstated (AI Resume Builder, AI Chatbot). MEERASH's AI is strictly limited to Smart Job & Task Recommendations, while the Resume Builder is a standard platform feature.
+- **Impact on the Project:**
+  - All mock data (`mock-landing-data.ts`) now reflects standard jobs (Software Engineer, Designer, etc.) and standard premium features.
+  - Landing, About, Contact, Pricing, and FAQ pages have been rewritten to focus on helping students, professionals, and employers connect securely.
+  - Future AI development in Phase II must remain strictly scoped to recommendation algorithms, not generative AI document creation.
 
 ---
 

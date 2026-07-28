@@ -7,7 +7,6 @@ export * from './features';
 export * from './how-it-works';
 export * from './featured-jobs';
 export * from './statistics';
-export * from './pricing';
 export * from './faq';
 export * from './cta-banner';
 export * from './contact-form';

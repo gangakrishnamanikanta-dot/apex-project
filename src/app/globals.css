@@ -138,6 +138,10 @@ body {
   background: var(--border-secondary);
 }
 
+@utility bg-gradient-gold {
+  background-image: linear-gradient(to right, var(--gold-primary), var(--champagne), var(--gold-primary));
+}
+
 /* Universal Focus Ring for Accessibility */
 :focus-visible {
   outline: 2px solid var(--gold-primary);

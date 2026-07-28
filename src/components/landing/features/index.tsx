@@ -21,8 +21,8 @@ export function FeaturesSection({ className }: FeaturesSectionProps) {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           badge="Why Choose MEERASH"
-          title="Engineered for Sovereign Excellence"
-          subtitle="We eliminate manual resume screening and financial friction. Our platform combines institutional cryptography with autonomous AI sourcing."
+          title="Engineered for Premium Excellence"
+          subtitle="MEERASH connects the right people with the right opportunities — through smart recommendations, powerful tools, and a platform built for the future of work."
           align="center"
         />
 

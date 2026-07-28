@@ -23,7 +23,7 @@ export function TopNav({
   onToggleMobileSidebar,
   user = {
     name: 'Alexander Wright',
-    email: 'a.wright@sovereign-enterprise.com',
+    email: 'a.wright@meerash-enterprise.com',
     role: 'Employer',
     isVerified: true,
     walletBalance: 124500,
@@ -114,7 +114,7 @@ export function TopNav({
                 <div className="flex flex-col gap-2.5 max-h-64 overflow-y-auto pr-1 font-sans text-xs text-white-secondary">
                   <div className="p-2.5 rounded-lg bg-surface-elevated/70 border-l-2 border-gold-primary">
                     <strong className="text-white-primary block">New Enterprise Application</strong>
-                    Sovereign Systems applied for Lead Quantum Architect.
+                    Premium Systems applied for Lead Quantum Architect.
                     <span className="block text-[10px] text-text-muted mt-1">2 minutes ago</span>
                   </div>
                   <div className="p-2.5 rounded-lg bg-surface-elevated/40">
@@ -160,7 +160,7 @@ export function TopNav({
                 <div className="p-3 border-b border-divider mb-1">
                   <strong className="text-sm font-bold text-white-primary block">{user.name}</strong>
                   <span className="text-text-muted block truncate">{user.email}</span>
-                  <Badge variant="gold" size="sm" className="mt-2">VIP Sovereign Tier</Badge>
+                  <Badge variant="gold" size="sm" className="mt-2">VIP Premium Tier</Badge>
                 </div>
 
                 <button className="flex w-full items-center gap-2.5 rounded-md px-3 py-2 text-left text-white-secondary hover:bg-surface-elevated hover:text-white-primary transition-colors">

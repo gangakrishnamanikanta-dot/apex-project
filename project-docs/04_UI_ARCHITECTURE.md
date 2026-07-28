@@ -91,27 +91,26 @@
 
 ---
 
-## 7. AI Resume Builder (`/resume`)
+## 7. Resume Builder (`/resume`)
 
-- **Purpose:** Advanced, AI-assisted career presentation tool enabling contractors to generate executive-grade resumes optimized for enterprise job matching.
+- **Purpose:** Standard career presentation tool enabling users to generate and manage professional resumes.
 - **Components Used:**
   - `ResumeEditorSidebar` (Accordion sections: Personal Summary, Experience, Technical Skills, Education, Certifications)
-  - `AIPromptAssistant` ("Optimize with AI" button simulating instant bullet point enhancement with gold glow animations)
-  - `LivePreviewPanel` (Real-time A4/Letter formatted document view with Black & Gold executive styling)
-  - `TemplateSelector` (Switch between Minimalist Executive, Technical Matrix, and Creative Dark layouts)
-  - `ExportActions` (Mock PDF download button, shareable verified link generator)
+  - `LivePreviewPanel` (Real-time A4/Letter formatted document view)
+  - `TemplateSelector` (Switch between standard layout templates)
+  - `ExportActions` (PDF download button, shareable link generator)
 - **Navigation Flow:** Accessible from `/dashboard` or `/profile`; auto-attaches to job applications.
-- **Dependencies:** `mock-users.ts` resume data; Framer Motion for text replacement animations.
+- **Dependencies:** `mock-users.ts` resume data.
 
 ---
 
-## 8. Wallet & Financial Portal (`/wallet`)
+## 8. Wallet & Earnings Portal (`/wallet`)
 
-- **Purpose:** Secure corporate banking and earnings management interface tracking contract disbursements, escrow holds, and payout withdrawals.
+- **Purpose:** Secure earnings management interface tracking task payments and payouts.
 - **Components Used:**
-  - `BalanceOverviewCards` (Total Available Balance, In Escrow / Pending Approval, Lifetime Earnings, Currency Selector)
+  - `BalanceOverviewCards` (Total Available Balance, Pending Approval, Lifetime Earnings, Currency Selector)
   - `TransactionHistoryTable` (Filterable table with date, transaction ID, client/contractor name, amount in gold typography, status badge)
-  - `PayoutMethodCard` (Connected bank accounts, wire transfer details, crypto/stablecoin escrow options)
+  - `PayoutMethodCard` (Connected bank accounts, payment details)
   - `WithdrawalModal` (Amount selector, payout destination dropdown, fee calculator simulation)
   - `EarningsChart` (Visual bar/line chart representing monthly revenue growth)
 - **Navigation Flow:** Connects to specific `/tasks` or `/jobs` via transaction reference IDs.
@@ -136,7 +135,7 @@
 
 - **Purpose:** Real-time alert hub tracking contract milestones, new bid arrivals, system security alerts, and chat mentions.
 - **Components Used:**
-  - `NotificationFilterTabs` (All, Unread, Jobs & Bids, Wallet & Escrow, System Alerts)
+  - `NotificationFilterTabs` (All, Unread, Jobs & Bids, Wallet, System Alerts)
   - `NotificationList` (Interactive items with read/unread visual indicators, timestamps, and action links)
   - `NotificationSettingsLink` (Quick redirect to granular notification preferences)
   - `MarkAllReadButton` (Instant state update clearing badge counts)
@@ -190,7 +189,7 @@
 - **Purpose:** Authoritative knowledge base and ticketing portal resolving technical queries, dispute mediation, and billing questions.
 - **Components Used:**
   - `SupportHeroSearch` (Instant keyword search filtering knowledge base articles)
-  - `CategoryGrid` (Quick help topics: Escrow Disputes, Account Verification, API Documentation, Billing FAQ)
+  - `CategoryGrid` (Quick help topics: Account Verification, Tasks & Jobs, Wallet Payouts, Premium Memberships)
   - `FAQAccordion` (Smooth collapsible Q&A items addressing common enterprise workflows)
   - `TicketCreationModal` (Form to submit urgent support requests with priority dropdown and file attachment)
   - `LiveChatWidget` (Floating bottom-right button triggering a simulated AI support assistant)

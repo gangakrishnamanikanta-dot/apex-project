@@ -5,8 +5,8 @@ import { cn } from '@/lib/utils';
 import { Check } from 'lucide-react';
 
 export interface CheckboxProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'> {
-  label?: string;
-  description?: string;
+  label?: React.ReactNode;
+  description?: React.ReactNode;
 }
 
 /**

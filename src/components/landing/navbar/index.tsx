@@ -22,17 +22,15 @@ export function PublicNavbar({ className }: PublicNavbarProps) {
 
   const navLinks = [
     { label: 'Home', href: '/' },
-    { label: 'Features', href: '/#features' },
-    { label: 'How It Works', href: '/#how-it-works' },
-    { label: 'Opportunities', href: '/#opportunities' },
-    { label: 'Pricing', href: '/#pricing' },
-    { label: 'About Us', href: '/about' },
+    { label: 'About', href: '/about' },
+    { label: 'Features', href: '/features' },
+    { label: 'Roadmap', href: '/roadmap' },
+    { label: 'FAQ', href: '/faq' },
     { label: 'Contact', href: '/contact' },
   ];
 
   const isActiveLink = (href: string) => {
     if (href === '/') return pathname === '/';
-    if (href.startsWith('/#')) return false; // Anchor links managed by scroll or standard view
     return pathname === href || pathname.startsWith(`${href}/`);
   };
 
@@ -70,17 +68,11 @@ export function PublicNavbar({ className }: PublicNavbarProps) {
         })}
       </nav>
 
-      {/* Desktop Auth & Primary CTA */}
+      {/* Desktop Early Access CTA */}
       <div className="hidden lg:flex items-center gap-4">
-        <Link
-          href="/login"
-          className="font-sans text-sm font-semibold text-white-secondary hover:text-gold-primary transition-colors px-3 py-2 rounded-lg hover:bg-surface"
-        >
-          Sign In
-        </Link>
-        <Link href="/register">
+        <Link href="/early-access">
           <Button variant="primary" size="md" className="shadow-gold-glow">
-            Get Started
+            Join Early Access
           </Button>
         </Link>
       </div>
@@ -99,7 +91,7 @@ export function PublicNavbar({ className }: PublicNavbarProps) {
       <Drawer
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
-        title="MEERASH Sovereign Network"
+        title="MEERASH"
         side="right"
         className="xl:hidden p-6 w-80 flex flex-col justify-between"
       >
@@ -129,14 +121,9 @@ export function PublicNavbar({ className }: PublicNavbarProps) {
 
         {/* Mobile Drawer Footer Actions */}
         <div className="flex flex-col gap-3 pt-6 border-t border-divider">
-          <Link href="/login" onClick={() => setIsMobileMenuOpen(false)}>
-            <Button variant="outline" size="lg" fullWidth>
-              Sign In
-            </Button>
-          </Link>
-          <Link href="/register" onClick={() => setIsMobileMenuOpen(false)}>
+          <Link href="/early-access" onClick={() => setIsMobileMenuOpen(false)}>
             <Button variant="primary" size="lg" fullWidth className="shadow-gold-glow">
-              Get Started
+              Join Early Access
             </Button>
           </Link>
         </div>

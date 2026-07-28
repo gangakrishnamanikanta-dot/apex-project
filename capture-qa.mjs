@@ -4,6 +4,10 @@ import fs from 'fs';
 
 const pages = [
   { url: 'http://localhost:3000/', name: 'landing.png' },
+  { url: 'http://localhost:3000/features', name: 'features.png' },
+  { url: 'http://localhost:3000/jobs', name: 'jobs.png' },
+  { url: 'http://localhost:3000/pricing', name: 'pricing.png' },
+  { url: 'http://localhost:3000/faq', name: 'faq.png' },
   { url: 'http://localhost:3000/about', name: 'about.png' },
   { url: 'http://localhost:3000/contact', name: 'contact.png' },
   { url: 'http://localhost:3000/privacy', name: 'privacy.png' },

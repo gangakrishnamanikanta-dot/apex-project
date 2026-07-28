@@ -85,7 +85,7 @@ The rollout of MEERASH is structured into two distinct strategic epochs:
 
 ### Phase II: Backend Integration & Ecosystem Scale (Future Scope)
 - **Objective:** Connect the validated UI frontend to enterprise cloud services, real-time databases, and transactional financial engines.
-- **Deliverables:** REST/GraphQL API integration, WebSocket real-time messaging, secure escrow wallet smart contracts or Stripe Connect integration, and live AI inference engines.
+- **Deliverables:** REST/GraphQL API integration, WebSocket real-time messaging, secure wallet integrations (e.g., Stripe Connect), and live AI inference engines.
 
 ---
 
@@ -113,8 +113,8 @@ The immediate scope is strictly bounded to frontend UI/UX engineering:
 Once the UI build reaches Definition of Done across all 10 roadmap sessions, future development cycles will introduce:
 1. **Cloud Native Backend:** Microservices or serverless architecture powered by Node.js/Go and PostgreSQL/MongoDB.
 2. **Real-Time Communication:** WebSockets and WebRTC for live enterprise messaging, video interview scheduling, and instant notification delivery.
-3. **Financial Escrow Engine:** Automated milestone verification linked to secure funds disbursement and tax reporting APIs.
-4. **Generative AI Matching:** Machine learning algorithms vectorizing candidate resumes against enterprise task requirements for instant compatibility scoring.
+3. **Wallet & Payments Engine:** Automated milestone verification linked to secure funds disbursement.
+4. **Generative AI Recommendations:** Machine learning algorithms matching candidate profiles against job and task requirements for instant compatibility scoring.
 5. **Mobile Applications:** React Native or Flutter mobile companion apps leveraging the established design tokens and component hierarchy.
 
 ---

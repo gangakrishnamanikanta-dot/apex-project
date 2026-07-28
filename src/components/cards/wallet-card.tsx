@@ -4,26 +4,22 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import { Card } from './base-card';
 import { Button } from '@/components/ui/button';
-import { Wallet, ArrowUpRight, ArrowDownLeft, Shield, Sparkles } from 'lucide-react';
+import { Wallet, ArrowUpRight, ArrowDownLeft, Sparkles } from 'lucide-react';
 
 export interface WalletCardProps {
   balance: string;
   currency?: string;
-  escrowBalance?: string;
-  accountNumber?: string;
   onDeposit?: () => void;
   onWithdraw?: () => void;
   className?: string;
 }
 
 /**
- * MEERASH Corporate Wallet Card
+ * MEERASH Wallet Card
  */
 export function WalletCard({
   balance,
   currency = 'USD',
-  escrowBalance = '$45,000.00',
-  accountNumber = '•••• •••• •••• 8842',
   onDeposit,
   onWithdraw,
   className,
@@ -47,29 +43,19 @@ export function WalletCard({
           </div>
           <div className="flex flex-col">
             <span className="font-sans text-xs font-semibold uppercase tracking-wider text-gold-primary">
-              Corporate Escrow Wallet
+              Wallet
             </span>
-            <span className="font-mono text-xs text-text-muted">{accountNumber}</span>
           </div>
         </div>
-        <span className="flex items-center gap-1 rounded-full bg-success/15 px-2.5 py-1 font-sans text-[11px] font-semibold text-success border border-success/30">
-          <Shield className="h-3 w-3" /> Secured
-        </span>
       </div>
 
       {/* Balance Display */}
       <div className="my-6 flex flex-col gap-1">
-        <span className="font-sans text-xs uppercase tracking-wider text-white-secondary">Available Balance</span>
+        <span className="font-sans text-xs uppercase tracking-wider text-white-secondary">Balance</span>
         <div className="flex items-baseline gap-2">
           <span className="font-mono text-4xl font-bold tracking-tight text-white-primary">{balance}</span>
           <span className="font-sans text-sm font-semibold text-gold-primary">{currency}</span>
         </div>
-        {escrowBalance && (
-          <span className="mt-1 flex items-center gap-1 font-sans text-xs text-white-secondary">
-            <Sparkles className="h-3.5 w-3.5 text-gold-primary" />
-            In Active Escrow: <strong className="text-white-primary font-mono">{escrowBalance}</strong>
-          </span>
-        )}
       </div>
 
       {/* Actions */}
@@ -80,7 +66,7 @@ export function WalletCard({
           leftIcon={<ArrowDownLeft className="h-4 w-4" />}
           onClick={onDeposit}
         >
-          Deposit Funds
+          Add Funds
         </Button>
         <Button
           variant="secondary"

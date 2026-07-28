@@ -17,18 +17,17 @@ export interface PremiumCardProps {
 }
 
 /**
- * MEERASH VIP Enterprise Tier Card
+ * MEERASH Premium Membership Card
  */
 export function PremiumCard({
-  tierName = 'VIP Enterprise Sovereign',
-  price = '$2,499',
-  billingPeriod = '/ month',
+  tierName = 'Premium',
+  price = 'Details Coming Soon',
+  billingPeriod = '',
   features = [
-    'Zero commission on high-value enterprise contracts',
-    'Dedicated AI sourcing agent & automated ATS grading',
-    'Instant corporate escrow settlement & crypto payout',
-    '24/7 VIP White-Glove concierge support',
-    'Custom branding & private employer portal',
+    'Priority placement in search results',
+    'Advanced filters and insights',
+    'Application analytics dashboard',
+    'Priority support access',
   ],
   isCurrentPlan = false,
   onUpgrade,
@@ -50,13 +49,13 @@ export function PremiumCard({
             <Crown className="h-5 w-5" />
           </div>
           <div className="flex flex-col">
-            <span className="font-sans text-xs font-bold uppercase tracking-widest text-gold-primary">VIP Exclusive</span>
+            <span className="font-sans text-xs font-bold uppercase tracking-widest text-gold-primary">Membership</span>
             <h3 className="font-sans text-lg font-bold tracking-tight text-white-primary">{tierName}</h3>
           </div>
         </div>
         {isCurrentPlan && (
           <span className="rounded-full bg-gold-primary/20 px-3 py-1 font-sans text-xs font-bold text-gold-primary border border-gold-primary">
-            Active Tier
+            Active Plan
           </span>
         )}
       </div>
@@ -70,7 +69,7 @@ export function PremiumCard({
       {/* Feature List */}
       <div className="flex flex-col gap-3">
         <span className="flex items-center gap-1.5 font-sans text-xs font-semibold uppercase tracking-wider text-gold-primary">
-          <Sparkles className="h-3.5 w-3.5" /> Included Enterprise Privileges:
+          <Sparkles className="h-3.5 w-3.5 text-gold-primary" /> What&apos;s Included:
         </span>
         <ul className="flex flex-col gap-2.5">
           {features.map((feature, i) => (
@@ -93,7 +92,7 @@ export function PremiumCard({
           isDisabled={isCurrentPlan}
           onClick={onUpgrade}
         >
-          {isCurrentPlan ? 'Current Sovereign Plan' : 'Upgrade to VIP Enterprise'}
+          {isCurrentPlan ? 'Current Plan' : 'Learn More'}
         </Button>
       </div>
     </Card>

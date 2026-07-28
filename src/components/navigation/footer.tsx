@@ -29,7 +29,7 @@ export function Footer({ className }: FooterProps) {
           <div className="flex flex-col gap-2">
             <MeerashLogo />
             <p className="font-sans text-xs text-text-muted max-w-md">
-              The Sovereign Enterprise Marketplace for building technology and creating opportunities with instant escrow settlement.
+              The Enterprise Marketplace for building technology and creating opportunities with instant escrow settlement.
             </p>
           </div>
 
@@ -42,7 +42,7 @@ export function Footer({ className }: FooterProps) {
               <Lock className="h-4 w-4 text-success" /> 256-Bit Escrow Encryption
             </span>
             <span className="flex items-center gap-1.5 rounded-md bg-surface px-3 py-1.5 border border-border-primary">
-              <Globe className="h-4 w-4 text-info" /> Global Sovereign Network
+              <Globe className="h-4 w-4 text-info" /> Global MEERASH Platform
             </span>
           </div>
         </div>
@@ -68,7 +68,7 @@ export function Footer({ className }: FooterProps) {
               Escrow Agreement
             </Link>
             <Link href="/support" className="hover:text-gold-primary transition-colors">
-              Sovereign Support
+              Premium Support
             </Link>
           </div>
 

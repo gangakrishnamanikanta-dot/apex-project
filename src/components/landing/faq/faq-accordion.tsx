@@ -7,14 +7,15 @@ import { MOCK_FAQS } from '@/data/mock-landing-data';
 
 export interface FAQAccordionProps {
   className?: string;
+  faqs?: typeof MOCK_FAQS;
 }
 
 /**
  * MEERASH FAQ Accordion Component
  * Composes the Session 1 Accordion primitive with mock enterprise questions.
  */
-export function FAQAccordion({ className }: FAQAccordionProps) {
-  const formattedItems = MOCK_FAQS.map((faq) => ({
+export function FAQAccordion({ className, faqs = MOCK_FAQS }: FAQAccordionProps) {
+  const formattedItems = faqs.map((faq) => ({
     id: faq.id,
     title: faq.question,
     content: (

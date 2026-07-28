@@ -22,7 +22,7 @@ export default function NotFoundPage() {
         <div className="flex flex-col gap-3">
           <span className="font-mono text-5xl font-extrabold text-gold-primary">404</span>
           <h1 className="font-sans text-3xl sm:text-4xl font-extrabold text-white-primary tracking-tight">
-            Sovereign Coordinate Unreachable
+            Premium Coordinate Unreachable
           </h1>
           <p className="font-sans text-base text-white-secondary leading-relaxed">
             The enterprise contract, smart escrow vault, or architectural portal you requested does not exist or has been securely decommissioned from the active grid.
@@ -38,7 +38,7 @@ export default function NotFoundPage() {
               leftIcon={<Home className="h-4 w-4" />}
               className="shadow-gold-glow font-bold px-8"
             >
-              Return to Sovereign Home
+              Return to Premium Home
             </Button>
           </Link>
           <Button

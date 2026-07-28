@@ -13,6 +13,7 @@
 - [DEC-003: Component-First Modular Directory Structure](#dec-003-component-first-modular-directory-structure)
 - [DEC-004: Responsive Dashboard with Collapsible Fixed Sidebar Navigation](#dec-004-responsive-dashboard-with-collapsible-fixed-sidebar-navigation)
 - [DEC-005: Automated Visual QA Verification & Session 2 Sign-Off Strategy](#dec-005-automated-visual-qa-verification--session-2-sign-off-strategy)
+- [DEC-006: Refactoring from Single-Page Scroll to Multi-Page Enterprise Architecture](#dec-006-refactoring-from-single-page-scroll-to-multi-page-enterprise-architecture)
 
 ---
 
@@ -73,4 +74,17 @@
 
 ---
 
+### DEC-006: Refactoring from Single-Page Scroll to Multi-Page Enterprise Architecture
+- **Date:** 2026-07-26
+- **Decision:** Transition Session 2 public website structure from a single-page scrolling landing site into an institutional multi-page architecture with dedicated absolute routes: `/`, `/features`, `/jobs`, `/pricing`, `/faq`, `/about`, and `/contact`.
+- **Reason:** Most AI coding agents default to marketing-style endless scrolling landing pages optimized for startup SaaS conversion. However, MEERASH is an authoritative, enterprise-grade job and task marketplace targeting CTOs and elite technical talent. A rich, multi-page information architecture separates concerns, enhances SEO, improves navigation clarity, and provides dedicated scaling space for complex capabilities (such as AI ATS scoring, zero-commission escrow, and institutional Q&As).
+- **Impact on the Project:**
+- Homepage (`/`) streamlined to focus purely on executive platform introduction, removing endless scrolling pricing and FAQ blocks.
+- Created `/features` (7-pillar technical deep dive), `/pricing` (comparison matrix and escrow FAQ), `/faq` (categorized knowledge base with instant search), and `/jobs` (public opportunity explorer with filter pills).
+- Navigation bar (`PublicNavbar`) and footer (`PublicFooter`) updated to support absolute routing across all endpoints.
+
+---
+
 > **Maintenance Protocol:** When adding a new entry to this document, assign the next sequential ID (`DEC-005`, `DEC-006`, etc.), record the date, and fill out all four mandatory fields: Decision, Reason, Date, and Impact on the Project.
+\ n # #   D E C - 0 0 7 :   C o n t e n t   R e a l i g n m e n t   t o   A u t h e n t i c   P r o d u c t   M e s s a g i n g \ n -   * * D a t e * * :   2 0 2 6 - 0 7 - 2 6 \ n -   * * C o n t e x t * * :   T h e   l a n d i n g   p a g e   c o p y   a n d   m o c k   d a t a   d r i f t e d   i n t o   a n   i n s t i t u t i o n a l   e s c r o w   b a n k i n g   p r o d u c t   r a t h e r   t h a n   M E E R A S H ' s   a c t u a l   p u r p o s e . \ n -   * * D e c i s i o n * * :   R e a l i g n e d   a l l   1 1   p u b l i c   r o u t e s   t o   r e p r e s e n t   M E E R A S H   a c c u r a t e l y   a s   a   j o b   a n d   t a s k   m a r k e t p l a c e   f e a t u r i n g   A I   c a r e e r   t o o l s   a n d   r e s u m e   b u i l d i n g ,   w i t h o u t   a l t e r i n g   t h e   e s t a b l i s h e d   d e s i g n   s y s t e m   o r   c o m p o n e n t   a r c h i t e c t u r e . \ n -   * * S t a t u s * * :   C o m p l e t e d .  
+ 

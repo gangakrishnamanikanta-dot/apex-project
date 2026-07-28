@@ -34,7 +34,7 @@ export function FAQSection({ className }: FAQSectionProps) {
         <div className="mt-12 max-w-2xl mx-auto rounded-xl border border-border-primary bg-surface-elevated/50 p-6 text-center flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex flex-col text-left">
             <h4 className="font-sans text-base font-bold text-white-primary">Have custom architectural requirements?</h4>
-            <p className="font-sans text-xs text-white-secondary">Our 24/7 Sovereign Concierge team is ready to assist.</p>
+            <p className="font-sans text-xs text-white-secondary">Our 24/7 Premium Concierge team is ready to assist.</p>
           </div>
           <Link href="/contact" className="shrink-0">
             <Button
