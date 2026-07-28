@@ -7,6 +7,7 @@ import { Textarea } from '@/components/forms/textarea';
 import { Button } from '@/components/ui/button';
 import { Alert } from '@/components/feedback/alert';
 import { Send, CheckCircle2, Shield } from 'lucide-react';
+import { supabase } from '@/lib/supabase';
 
 export interface ContactFormProps {
   className?: string;
@@ -24,15 +25,26 @@ export function ContactForm({ className }: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate network delay for UI-only experience
-    setTimeout(() => {
+    try {
+      const { error } = await supabase
+        .from('inquiries')
+        .insert([{ name, email, subject, message }]);
+        
+      if (error) {
+        console.error('Error inserting inquiry:', error);
+        // Could set an error state here if desired
+      } else {
+        setIsSubmitted(true);
+      }
+    } catch (err) {
+      console.error('Unexpected error:', err);
+    } finally {
       setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 1000);
+    }
   };
 
   return (

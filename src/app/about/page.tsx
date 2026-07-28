@@ -6,6 +6,7 @@ import { SectionHeading } from '@/components/landing/section-heading';
 import { CTABanner } from '@/components/landing/cta-banner';
 import { Users, Target, Globe, Briefcase } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 
 export default function AboutPage() {
@@ -77,6 +78,33 @@ export default function AboutPage() {
               <h3 className="text-xl font-bold text-white-primary mb-3">For Employers</h3>
               <p className="text-white-secondary">
                 Post jobs and tasks, review applications, and connect with verified candidates ready to contribute.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Leadership / Founder */}
+        <div className="mx-auto mt-32 max-w-7xl px-6 lg:px-12">
+          <SectionHeading
+            badge="Leadership"
+            title="Meet Our Founder"
+            subtitle="Driven by a passion to empower talent and businesses."
+            align="center"
+          />
+          <div className="mt-12 flex justify-center">
+            <div className="bg-surface-elevated border border-divider rounded-2xl p-8 max-w-md text-center w-full">
+              <div className="h-32 w-32 rounded-full mx-auto mb-6 flex items-center justify-center border-2 border-gold-primary/30 overflow-hidden relative">
+                <Image 
+                  src="/founder-ceo.png" 
+                  alt="Abdul Hammid Sk" 
+                  fill 
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-2xl font-bold text-white-primary mb-1">Abdul Hammid Sk</h3>
+              <p className="text-gold-primary font-semibold mb-4 tracking-wide uppercase text-sm">Founder & CEO</p>
+              <p className="text-white-secondary leading-relaxed">
+                "We believe finding work—whether a full-time career or a short-term task—should be seamless. Our vision is a platform where anyone can discover, apply for, and complete opportunities with confidence."
               </p>
             </div>
           </div>

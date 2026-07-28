@@ -7,6 +7,7 @@ import { HowItWorksSection } from '@/components/landing/how-it-works';
 import { FeaturedJobsSection } from '@/components/landing/featured-jobs';
 import { StatisticsSection } from '@/components/landing/statistics';
 import { CTABanner } from '@/components/landing/cta-banner';
+import { LiveInquiriesFeed } from '@/components/landing/live-inquiries-feed';
 
 export default function LandingPage() {
   return (
@@ -17,6 +18,7 @@ export default function LandingPage() {
       <FeaturedJobsSection />
       <StatisticsSection />
       <CTABanner />
+      <LiveInquiriesFeed />
     </PublicLayout>
   );
 }
