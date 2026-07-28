@@ -35,67 +35,69 @@ export function PublicNavbar({ className }: PublicNavbarProps) {
   };
 
   return (
-    <header
-      className={cn(
-        'sticky top-0 z-50 flex h-16 md:h-20 w-full items-center justify-between border-b border-border-primary/80 bg-bg-primary/85 px-4 sm:px-6 lg:px-12 backdrop-blur-lg transition-all select-none',
-        className
-      )}
-    >
-      {/* Brand Logo */}
-      <Link href="/" className="flex items-center group">
-        <MeerashLogo className="h-8 sm:h-9 w-auto transition-transform duration-200 group-hover:scale-105" />
-      </Link>
-
-      {/* Desktop Navigation Links */}
-      <nav className="hidden xl:flex items-center gap-8">
-        {navLinks.map((link) => {
-          const active = isActiveLink(link.href);
-          return (
-            <Link
-              key={link.label}
-              href={link.href}
-              className={cn(
-                'font-sans text-sm font-semibold transition-colors duration-200 relative py-1',
-                active ? 'text-gold-primary font-bold' : 'text-white-secondary hover:text-white-primary'
-              )}
-            >
-              {link.label}
-              {active && (
-                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold-primary shadow-gold-glow rounded-full" />
-              )}
-            </Link>
-          );
-        })}
-      </nav>
-
-      {/* Desktop Early Access CTA */}
-      <div className="hidden lg:flex items-center gap-4">
-        <Link href="/early-access">
-          <Button variant="primary" size="md" className="shadow-gold-glow">
-            Join Early Access
-          </Button>
-        </Link>
-      </div>
-
-      {/* Mobile Hamburger Button */}
-      <button
-        type="button"
-        onClick={() => setIsMobileMenuOpen(true)}
-        className="flex xl:hidden rounded-lg p-2.5 text-white-secondary hover:bg-surface hover:text-white-primary border border-border-primary transition-colors focus:outline-none"
-        aria-label="Open menu"
+    <>
+      <header
+        className={cn(
+          'sticky top-0 z-40 flex h-16 md:h-20 w-full items-center justify-between border-b border-border-primary/80 bg-bg-primary/85 px-4 sm:px-6 lg:px-12 backdrop-blur-lg transition-all select-none',
+          className
+        )}
       >
-        <Icons.Menu className="h-6 w-6" />
-      </button>
+        {/* Brand Logo */}
+        <Link href="/" className="flex items-center group">
+          <MeerashLogo className="h-8 sm:h-9 w-auto transition-transform duration-200 group-hover:scale-105" />
+        </Link>
 
-      {/* Mobile Navigation Drawer */}
+        {/* Desktop Navigation Links */}
+        <nav className="hidden xl:flex items-center gap-8">
+          {navLinks.map((link) => {
+            const active = isActiveLink(link.href);
+            return (
+              <Link
+                key={link.label}
+                href={link.href}
+                className={cn(
+                  'font-sans text-sm font-semibold transition-colors duration-200 relative py-1',
+                  active ? 'text-gold-primary font-bold' : 'text-white-secondary hover:text-white-primary'
+                )}
+              >
+                {link.label}
+                {active && (
+                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold-primary shadow-gold-glow rounded-full" />
+                )}
+              </Link>
+            );
+          })}
+        </nav>
+
+        {/* Desktop Early Access CTA */}
+        <div className="hidden lg:flex items-center gap-4">
+          <Link href="/early-access">
+            <Button variant="primary" size="md" className="shadow-gold-glow">
+              Join Early Access
+            </Button>
+          </Link>
+        </div>
+
+        {/* Mobile Hamburger Button */}
+        <button
+          type="button"
+          onClick={() => setIsMobileMenuOpen(true)}
+          className="flex xl:hidden rounded-lg p-2.5 text-white-secondary hover:bg-surface hover:text-white-primary border border-border-primary transition-colors focus:outline-none"
+          aria-label="Open menu"
+        >
+          <Icons.Menu className="h-6 w-6" />
+        </button>
+      </header>
+
+      {/* Mobile Navigation Drawer - Placed outside header to escape backdrop-blur containment */}
       <Drawer
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
         title="MEERASH"
         side="right"
-        className="xl:hidden p-6 w-80 flex flex-col justify-between"
+        className="xl:hidden"
       >
-        <div className="flex flex-col gap-6 mt-2">
+        <div className="flex flex-col justify-between h-full min-h-[calc(100vh-140px)]">
           <nav className="flex flex-col gap-2">
             {navLinks.map((link) => {
               const active = isActiveLink(link.href);
@@ -105,7 +107,7 @@ export function PublicNavbar({ className }: PublicNavbarProps) {
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
-                    'flex items-center justify-between rounded-lg px-4 py-3 font-sans text-base font-semibold transition-all duration-200',
+                    'flex items-center justify-between rounded-lg px-4 py-3.5 font-sans text-base font-semibold transition-all duration-200',
                     active
                       ? 'bg-gradient-to-r from-gold-primary/20 to-transparent text-gold-primary border-l-2 border-gold-primary'
                       : 'text-white-secondary hover:bg-surface-elevated hover:text-white-primary'
@@ -117,17 +119,17 @@ export function PublicNavbar({ className }: PublicNavbarProps) {
               );
             })}
           </nav>
-        </div>
 
-        {/* Mobile Drawer Footer Actions */}
-        <div className="flex flex-col gap-3 pt-6 border-t border-divider">
-          <Link href="/early-access" onClick={() => setIsMobileMenuOpen(false)}>
-            <Button variant="primary" size="lg" fullWidth className="shadow-gold-glow">
-              Join Early Access
-            </Button>
-          </Link>
+          {/* Mobile Drawer Footer Actions */}
+          <div className="flex flex-col gap-3 pt-6 mt-6 border-t border-border-primary/80">
+            <Link href="/early-access" onClick={() => setIsMobileMenuOpen(false)}>
+              <Button variant="primary" size="lg" fullWidth className="shadow-gold-glow">
+                Join Early Access
+              </Button>
+            </Link>
+          </div>
         </div>
       </Drawer>
-    </header>
+    </>
   );
 }
