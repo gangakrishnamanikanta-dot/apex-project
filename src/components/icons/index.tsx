@@ -93,14 +93,14 @@ export const Icons = {
  */
 export function MeerashLogo({ className, showText = true }: { className?: string; showText?: boolean }) {
   return (
-    <div className={cn("flex items-center gap-3 select-none", className)}>
+    <div className={cn("flex items-center gap-3.5 select-none", className)}>
       <img
         src="/logo.png"
         alt="MEERASH Logo"
-        className="h-10 sm:h-12 md:h-14 w-auto object-contain shrink-0 filter drop-shadow-md"
+        className="h-12 sm:h-16 md:h-20 w-auto object-contain shrink-0 filter drop-shadow-lg"
       />
       {showText && (
-        <span className="font-sans text-xl sm:text-2xl font-extrabold tracking-tight text-white-primary">
+        <span className="font-sans text-2xl sm:text-3xl font-extrabold tracking-tight text-white-primary">
           MEERASH
         </span>
       )}
