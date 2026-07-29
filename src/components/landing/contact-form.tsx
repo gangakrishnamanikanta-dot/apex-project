@@ -25,9 +25,12 @@ export function ContactForm({ className }: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError(null);
 
     try {
       const { error } = await supabase
@@ -36,12 +39,13 @@ export function ContactForm({ className }: ContactFormProps) {
         
       if (error) {
         console.error('Error inserting inquiry:', error);
-        // Could set an error state here if desired
+        setSubmitError(error.message || JSON.stringify(error));
       } else {
         setIsSubmitted(true);
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error('Unexpected error:', err);
+      setSubmitError(err.message || String(err));
     } finally {
       setIsSubmitting(false);
     }
@@ -123,6 +127,12 @@ export function ContactForm({ className }: ContactFormProps) {
               We respect your privacy. Messages are used only to respond to your inquiry.
             </span>
           </Alert>
+
+          {submitError && (
+            <Alert variant="error" className="my-1 border-red-500/50 bg-red-500/10 text-red-500">
+              <span className="text-sm font-semibold">Submission failed:</span> {submitError}
+            </Alert>
+          )}
 
           <Button
             type="submit"
