@@ -50,7 +50,7 @@ export default function EarlyAccessPage() {
         // Postgres unique violation code
         setErrorMessage('This email is already on the early access list!');
       } else {
-        setErrorMessage('Something went wrong. Please try again.');
+        setErrorMessage(error.message || 'Something went wrong. Please try again.');
       }
       return;
     }
