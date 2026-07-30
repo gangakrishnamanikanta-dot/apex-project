@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle2, ChevronRight, Sparkles } from 'lucide-react';
 import Link from 'next/link';
+import { supabase } from '@/lib/supabase';
 
 type UserRole = 'job_seeker' | 'employer' | 'student' | 'freelancer';
 
@@ -23,18 +24,38 @@ export default function EarlyAccessPage() {
   const [selectedRole, setSelectedRole] = useState<UserRole | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !email.trim() || !selectedRole) return;
 
     setIsSubmitting(true);
+    setErrorMessage('');
 
-    // Simulate network delay for UI-only experience
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 1200);
+    const { error } = await supabase
+      .from('early_access_users')
+      .insert([
+        {
+          name: name.trim(),
+          email: email.trim(),
+          role: selectedRole,
+        },
+      ]);
+
+    setIsSubmitting(false);
+
+    if (error) {
+      if (error.code === '23505') {
+        // Postgres unique violation code
+        setErrorMessage('This email is already on the early access list!');
+      } else {
+        setErrorMessage('Something went wrong. Please try again.');
+      }
+      return;
+    }
+
+    setIsSubmitted(true);
   };
 
   return (
@@ -133,6 +154,12 @@ export default function EarlyAccessPage() {
                     ))}
                   </div>
                 </div>
+
+                {errorMessage && (
+                  <div className="mb-6 rounded-xl bg-red-500/10 border border-red-500/20 p-4 text-center">
+                    <p className="font-sans text-sm font-bold text-red-500">{errorMessage}</p>
+                  </div>
+                )}
 
                 {/* Submit Button */}
                 <Button
